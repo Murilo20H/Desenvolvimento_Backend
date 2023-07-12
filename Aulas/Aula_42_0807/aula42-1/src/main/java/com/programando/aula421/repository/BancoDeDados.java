@@ -43,15 +43,15 @@ public class BancoDeDados {
 
     public String deleteById(int id) {
         String nome = null;
-        int indentificador = 0;
+        int identificador = 0;
         for (Torneio torneio : torneios) {
             if (torneio.getId() == id) {
                 nome = torneio.getNome();
-                indentificador = torneio.getId();
+                identificador = torneio.getId();
                 torneios.remove(torneio);
-                return "O torneio " + nome + " (id: " + indentificador + ") foi removido com sucesso!";
+                return "O torneio " + nome + " (id: " + identificador + ") foi removido com sucesso!";
             }
         }
-        return "O torneio " + nome + " (id: " + indentificador + ") não foi encontrado!";
+        return "O torneio " + nome + " (id: " + identificador + ") não foi encontrado!";
     }
 }
