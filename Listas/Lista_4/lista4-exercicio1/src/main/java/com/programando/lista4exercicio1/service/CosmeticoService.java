@@ -2,12 +2,16 @@ package com.programando.lista4exercicio1.service;
 
 import com.programando.lista4exercicio1.model.Cosmetico;
 import com.programando.lista4exercicio1.repository.BancoDeDados;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class CosmeticoService {
 
-    private BancoDeDados bancoDeDados = new BancoDeDados();
+    @Autowired
+    private BancoDeDados bancoDeDados;
     public List<Cosmetico> findAll(){
         return bancoDeDados.findAll();
     }

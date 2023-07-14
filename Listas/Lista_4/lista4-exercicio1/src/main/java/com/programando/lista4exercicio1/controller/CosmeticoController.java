@@ -2,6 +2,7 @@ package com.programando.lista4exercicio1.controller;
 
 import com.programando.lista4exercicio1.model.Cosmetico;
 import com.programando.lista4exercicio1.service.CosmeticoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,7 +11,8 @@ import java.util.List;
 @RequestMapping("/cosmeticos")
 public class CosmeticoController {
 
-    private CosmeticoService cosmeticoService = new CosmeticoService();
+    @Autowired
+    private CosmeticoService cosmeticoService;
 
     @GetMapping
     public List<Cosmetico> getAll(){

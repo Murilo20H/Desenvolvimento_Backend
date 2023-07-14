@@ -1,11 +1,13 @@
 package com.programando.lista4exercicio1.repository;
 
 import com.programando.lista4exercicio1.model.Cosmetico;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class BancoDeDados {
     private List<Cosmetico> cosmeticos = new ArrayList<>();
 
