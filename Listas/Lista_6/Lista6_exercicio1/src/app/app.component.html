@@ -1,0 +1,11 @@
+<div class="container d-flex justify-content-center">
+  <div class="row" *ngFor="let cosmetico of cosmeticos">
+    <div class="card" style="width: 8.7rem;">
+      <img src="{{ cosmetico.imagem }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ cosmetico.nome }}</h5>
+        <span class="badge badge-pill badge-success p-1 mb-2 justify-content-center">R$:{{ cosmetico.preco }}</span>
+      </div>
+    </div>
+  </div>
+</div>

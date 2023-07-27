@@ -5,12 +5,14 @@ import java.math.BigDecimal;
 public class Cosmetico {
     private int id;
     private String nome;
-    private BigDecimal preco;
+    private double preco;
+    private String imagem;
 
-    public Cosmetico(int id, String nome, BigDecimal preco) {
+    public Cosmetico(int id, String nome, double preco, String imagem) {
         this.id = id;
         this.nome = nome;
         this.preco = preco;
+        this.imagem = imagem;
     }
 
     public int getId() {
@@ -29,11 +31,18 @@ public class Cosmetico {
         this.nome = nome;
     }
 
-    public BigDecimal getPreco() {
+    public double getPreco() {
         return preco;
     }
 
-    public void setPreco(BigDecimal preco) {
+    public void setPreco(double preco) {
         this.preco = preco;
+    }
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
     }
 }
