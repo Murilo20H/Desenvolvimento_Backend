@@ -1,0 +1,19 @@
+<form>
+  <br>
+  <input type="number" name="primeiro-campo" id="id" [(ngModel)]="jogo.id" placeholder="Insira o ID do jogo">
+  <br><br>
+  <input type="text" name="segundo-campo" id="nome" [(ngModel)]="jogo.nome" placeholder="Insira o nome do jogo">
+  <br><br>
+  <input type="text" name="terceiro-campo" id="descricao" [(ngModel)]="jogo.descricao" placeholder="Insira a descrição do jogo">
+  <br><br>
+  <input type="number" name="quarto-campo" id="preco" [(ngModel)]="jogo.preco" placeholder="Insira o preço do jogo">
+  <br><br>
+  <input type="text" name="quinto-campo" id="imagem" [(ngModel)]="jogo.imagem" placeholder="Insira o URL da imagem do jogo">
+  <br><br>
+  <input type="text" name="sexto-campo" id="site" [(ngModel)]="jogo.site" placeholder="Insira a página do jogo na Steam">
+  <br><br>
+  <p>Marque esta caixa para favoritar o jogo:</p>
+  <input type="checkbox" name="setimo-campo" id="esta_favoritado" [(ngModel)]="jogo.esta_favoritado">
+  <br><br>
+  <button class="btn btn-primary"(click)="saveJogo()">Enviar Jogo</button>
+</form>
