@@ -8,8 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cadastro.component.css']
 })
 export class CadastroComponent implements OnInit{
-  //public jogo: Jogo = new Jogo();
-  public jogo!: Jogo;
+  public jogo: Jogo = new Jogo();
 
   constructor(private jogoService: JogoService) {}
 
