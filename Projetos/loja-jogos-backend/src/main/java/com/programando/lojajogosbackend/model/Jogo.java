@@ -1,12 +1,10 @@
 package com.programando.lojajogosbackend.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.sun.istack.NotNull;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Jogo {
@@ -23,6 +21,38 @@ public class Jogo {
     private String site;
     @JsonProperty("esta_favoritado")
     private boolean estaFavoritado;
+
+    @ManyToOne
+    @JoinColumn(name = "categoria_id")
+    @JsonIgnoreProperties("jogos")
+    private Categoria categoria;
+
+    @ManyToOne
+    @JoinColumn(name = "conta_id")
+    @JsonIgnoreProperties("jogos")
+    private Conta conta;
+
+    //@ManyToMany(mappedBy = "Jogo_Categorias",
+    //        joinColumns = @JoinColumn(name = "jogo_id"),
+    //        inverseJoinColumns = @JoinColumn(name = "categoria_id"))
+    //private List<Categoria> categorias;
+
+
+    public Conta getConta() {
+        return conta;
+    }
+
+    public void setConta(Conta conta) {
+        this.conta = conta;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
 
     public String getSite() {
         return site;
